@@ -9312,7 +9312,7 @@
       'serviceWorker' in navigator &&
         window.addEventListener('load', function() {
           navigator.serviceWorker
-            .register('/service-worker.js')
+            .register('/create-react-app-verfinal/build/service-worker.js')
             .then(function(e) {
               e.onupdatefound = function() {
                 var t = e.installing;
