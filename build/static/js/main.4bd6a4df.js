@@ -512,7 +512,7 @@
               password: n,
             })
             .then(function(e) {
-              window.location.href = '/create-react-app-verfinal/build/login';
+              window.location.href = '/create-react-app-verfinal/build/#login';
             })
             .catch(function(e) {
               window.location.href = '/?msg=This%20username%20already%20exists';
@@ -6243,7 +6243,7 @@
             null,
             o.a.createElement(s.a, {
               exact: !0,
-              path: '/create-react-app-verfinal/build/login',
+              path: '/create-react-app-verfinal/build/#login',
               component: c.a,
             }),
             o.a.createElement(s.a, {
@@ -6843,7 +6843,7 @@
                           s.a.createElement(
                             p.b,
                             {
-                              to: '/create-react-app-verfinal/build/login',
+                              to: '/create-react-app-verfinal/build/#login',
                               onClick: this.handleLogout,
                             },
                             'Log out '
@@ -7070,7 +7070,7 @@
                           s.a.createElement(
                             p.b,
                             {
-                              to: '/create-react-app-verfinal/build/login',
+                              to: '/create-react-app-verfinal/build/#login',
                               onClick: this.handleLogout,
                             },
                             'Log out '
@@ -7399,7 +7399,7 @@
                   s.a.createElement(
                     u.b,
                     {
-                      to: '/create-react-app-verfinal/build/login',
+                      to: '/create-react-app-verfinal/build/#login',
                     },
                     'Click here to head to the login page.'
                   )
@@ -7736,7 +7736,7 @@
                       s.a.createElement(
                         l.b,
                         {
-                          to: '/create-react-app-verfinal/build/login',
+                          to: '/create-react-app-verfinal/build/#login',
                           onClick: this.handleLogout,
                         },
                         'Log out '
@@ -7961,7 +7961,7 @@
             value: function(e) {
               m.remove('token'), this.setState({
                 authenticated: !1,
-              }), (window.location.href = '/create-react-app-verfinal/build/login');
+              }), (window.location.href = '/create-react-app-verfinal/build/#login');
             },
           },
           {
@@ -7975,7 +7975,7 @@
             value: function() {
               var e = this;
               this.state.authenticated ||
-                (window.location.href = '/create-react-app-verfinal/build/login'), console.log(
+                (window.location.href = '/create-react-app-verfinal/build/#login'), console.log(
                 this.state.authenticated,
                 'that the user is authenticated'
               );
@@ -8024,7 +8024,7 @@
                       s.a.createElement(
                         f.b,
                         {
-                          to: '/create-react-app-verfinal/build/login',
+                          to: '/create-react-app-verfinal/build/#login',
                           onClick: this.handleLogout,
                         },
                         'Log out '
@@ -8236,7 +8236,7 @@
                       s.a.createElement(
                         l.b,
                         {
-                          to: '/create-react-app-verfinal/build/login',
+                          to: '/create-react-app-verfinal/build/#login',
                           onClick: this.handleLogout,
                         },
                         'Log out '
@@ -8493,7 +8493,7 @@
                         s.a.createElement(
                           l.b,
                           {
-                            to: '/create-react-app-verfinal/build/login',
+                            to: '/create-react-app-verfinal/build/#login',
                             onClick: this.handleLogout,
                           },
                           'Log out '
@@ -8942,7 +8942,7 @@
               o.a.createElement(
                 s.b,
                 {
-                  to: '/create-react-app-verfinal/build/login',
+                  to: '/create-react-app-verfinal/build/#login',
                 },
                 ' Log in'
               ),
@@ -8963,7 +8963,7 @@
             )
           ),
           o.a.createElement(u.a, {
-            path: '/create-react-app-verfinal/build/login',
+            path: '/create-react-app-verfinal/build/#login',
             component: c.a,
           }),
           o.a.createElement(
