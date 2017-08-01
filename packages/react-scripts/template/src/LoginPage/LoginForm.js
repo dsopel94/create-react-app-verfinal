@@ -16,7 +16,7 @@ const LoginForm = (
     msg,
   }
 ) => (
-  <form action="/" onSubmit={onSubmit}>
+  <form className="pre" action="/" onSubmit={onSubmit}>
     <div className="container">
       <h1 className="header">School Management App</h1>
       <h2 className="login">Log In</h2>
@@ -49,7 +49,7 @@ const LoginForm = (
       </div>
 
       <div className="signup-redirect">
-        Don't have an account? Create one. <Link to="/"> Sign Up</Link>
+        Don't have an account? Create one. <Link to="/signup"> Sign Up</Link>
       </div>
       <div className="demo-account-info">
         <p>Want to try the app without creating a sign up?</p>

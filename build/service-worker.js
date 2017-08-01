@@ -1,4 +1,5 @@
 'use strict';
+
 function setOfCachedUrls(e) {
   return e
     .keys()
@@ -12,9 +13,9 @@ function setOfCachedUrls(e) {
     });
 }
 var precacheConfig = [
-  ['index.html', '0e91a0f7e3430fcad6dc324dd419d5e9'],
-  ['static/css/main.15a49382.css', '951ed313daa1c03c15b2d5b36309f03d'],
-  ['static/js/main.4bd6a4df.js', '6c1ee9587dfae2d874c32b32ff697ae8'],
+  ['index.html', '219c9e67e5faf15550dffa5d4865e8d4'],
+  ['static/css/main.e2a92c7d.css', '1c986ac722736b0bf1e09f274eb286fb'],
+  ['static/js/main.d6c94bbd.js', '7cfc6e5aa8a28977f3ab920451d4a6b6'],
   ['static/media/logo.5d5d9eef.svg', '5d5d9eefa31e5e13a6610d9fa7a283bb'],
 ],
   cacheName = 'sw-precache-v3-sw-precache-webpack-plugin-' +
@@ -87,7 +88,9 @@ self.addEventListener('install', function(e) {
           return Promise.all(
             Array.from(urlsToCacheKeys.values()).map(function(n) {
               if (!t.has(n)) {
-                var r = new Request(n, { credentials: 'same-origin' });
+                var r = new Request(n, {
+                  credentials: 'same-origin',
+                });
                 return fetch(r).then(function(t) {
                   if (!t.ok)
                     throw new Error(

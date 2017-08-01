@@ -13,7 +13,7 @@ const SignUpForm = (
     msg,
   }
 ) => (
-  <form action="/" onSubmit={onSubmit}>
+  <form className="pre" action="/" onSubmit={onSubmit}>
     <div className="container">
       <h1 className="header">School Management App</h1>
       <h2 className="sign-up">Sign Up</h2>
@@ -59,7 +59,7 @@ const SignUpForm = (
         <p>
           Want more info about this app?
           {' '}
-          <Link to={'/info'}>Click here</Link>
+          <Link to={'/'}>Click here</Link>
           {' '}
         </p>
       </div>

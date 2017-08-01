@@ -11,21 +11,22 @@ class EditStudentPage extends React.Component {
     super(props, context);
     this.state = {
       student: {
-        firstName: '',
-        lastName: '',
-        phoneNumber: '',
-        streetAddress: '',
-        miscAddress: '',
+        firstName: this.props.student.firstName,
+        lastName: this.props.student.lastName,
+        phoneNumber: this.props.student.phoneNumber,
+        streetAddress: this.props.student.streetAddress,
+        miscAddress: this.props.student.miscAddress,
       },
       isSubmitted: false,
     };
+    console.log(this.props.firstName, 'FIRST NAME');
     this.updateInput = this.updateInput.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
   }
   updateInput(event) {
     const field = event.target.name;
-    const student = this.state.student;
+    const student = this.props.student;
     student[field] = event.target.value;
     this.setState({
       student,
@@ -39,14 +40,10 @@ class EditStudentPage extends React.Component {
 
   componentWillMount() {
     this.props.dispatch(actions.getStudent(this.props.match.params.cuid));
-    console.log("Let's see what happens here");
-    console.log(this.props.firstName, 'first name');
   }
 
   componentDidMount() {
     this.props.dispatch(actions.getStudent(this.props.match.params.cuid));
-    console.log("Let's see what happens here");
-    console.log(this.props.firstName, 'first name');
   }
 
   onSubmit(event) {
@@ -98,48 +95,48 @@ class EditStudentPage extends React.Component {
         </div>
         <div className="container">
           <div className="submitForm">
-            <div className="field-line">
+            <div className="edit-student-field-line">
               <label htmlFor="firstName">First Name:</label>
               <input
                 id="firstName"
                 name="firstName"
-                value={this.props.firstName}
+                value={this.props.student.firstName}
                 onChange={this.updateInput}
               />
             </div>
-            <div className="field-line">
+            <div className="edit-student-field-line">
               <label htmlFor="lastName">Last Name:</label>
               <input
                 id="lastName"
                 name="lastName"
-                value={this.props.lastName}
+                value={this.props.student.lastName}
                 onChange={this.updateInput}
               />
             </div>
-            <div className="field-line">
+            <div className="edit-student-field-line">
               <label htmlFor="phoneNumber">Phone Number:</label>
               <input
                 id="phoneNumber"
                 name="phoneNumber"
-                value={this.props.phoneNumber}
+                value={this.props.student.phoneNumber}
                 onChange={this.updateInput}
               />
             </div>
-            <div className="field-line">
+            <div className="edit-student-field-line">
               <label htmlFor="streetAddress">Street Address:</label>
               <input
                 id="streetAddress"
                 name="streetAddress"
-                value={this.props.streetAddress}
+                value={this.props.student.streetAddress}
                 onChange={this.updateInput}
               />
             </div>
-            <div className="field-line">
+            <div className="edit-student-field-line">
               <label htmlFor="miscAddress">City, State, Zip:</label>
               <input
                 id="miscAddress"
                 name="miscAddress"
-                value={this.props.miscAddress}
+                value={this.props.student.miscAddress}
                 onChange={this.updateInput}
               />
             </div>
@@ -160,6 +157,7 @@ const mapStateToProps = (state, props) => {
     streetAddress: state.student.student.streetAddress,
     courses: state.student.courses,
     studentCourse: state.student.student.courses,
+    student: state.student.student,
   };
 };
 export default connect(mapStateToProps)(EditStudentPage);

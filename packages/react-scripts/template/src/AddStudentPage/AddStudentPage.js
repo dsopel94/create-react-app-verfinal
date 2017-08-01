@@ -80,7 +80,7 @@ class AddStudentPage extends React.Component {
         </div>
         <div className="container">
           <div className="submitForm">
-            <div className="field-line">
+            <div className="add-student-field-line">
               <label htmlFor="firstName">First Name:</label>
               <input
                 id="firstName"
@@ -89,7 +89,7 @@ class AddStudentPage extends React.Component {
                 onChange={this.updateInput}
               />
             </div>
-            <div className="field-line">
+            <div className="add-student-field-line">
               <label htmlFor="lastName">Last Name:</label>
               <input
                 id="lastName"
@@ -98,7 +98,7 @@ class AddStudentPage extends React.Component {
                 onChange={this.updateInput}
               />
             </div>
-            <div className="field-line">
+            <div className="add-student-field-line">
               <label htmlFor="phoneNumber">Phone Number:</label>
               <input
                 id="phoneNumber"
@@ -107,7 +107,7 @@ class AddStudentPage extends React.Component {
                 onChange={this.updateInput}
               />
             </div>
-            <div className="field-line">
+            <div className="add-student-field-line">
               <label htmlFor="streetAddress">Street Address:</label>
               <input
                 id="streetAddress"
@@ -116,7 +116,7 @@ class AddStudentPage extends React.Component {
                 onChange={this.updateInput}
               />
             </div>
-            <div className="field-line">
+            <div className="add-student-field-line">
               <label htmlFor="miscAddress">City, State, Zip:</label>
               <input
                 id="miscAddress"

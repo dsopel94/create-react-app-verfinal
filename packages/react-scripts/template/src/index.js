@@ -33,14 +33,14 @@ const routes = (
 
       <div>
         <Route exact path="/login" component={LoginPage} />
-        <Route exact path="/" component={SignUpPage} />
+        <Route exact path="/signup" component={SignUpPage} />
         <Route exact path="/auth/dashboard" component={DashboardPage} />
         <Route exact path="/addCourse" component={AddCoursePage} />
         <Route exact path="/courses/:cuid" component={CoursePage} />
         <Route exact path="/addStudent/:cuid" component={AddStudentPage} />
         <Route exact path="/editStudent/:cuid" component={EditStudentPage} />
         <Route exact path="/editCourse/:cuid" component={EditCoursePage} />
-        <Route exact path="/info" component={AddInfoPage} />
+        <Route exact path="/" component={AddInfoPage} />
       </div>
     </BrowserRouter>
   </Provider>
